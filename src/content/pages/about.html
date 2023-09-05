@@ -2,7 +2,7 @@
 title: 'About'
 description: 'Meta description for the page'
 preloadImg: '/assets/images/cabinets2.jpg'
-permalink: 'about/'
+permalink: '/about/'
 eleventyNavigation:
     key: About Us
     order: 200
@@ -15,62 +15,82 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
-
-    <section id="int-hero">
-        <h1 id="home-h">About Us</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
-        </picture>
-
-    </section>
 
     <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
 
-    <section id="sbs">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="563">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="563">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="gavel" width="136" height="77">
-                </div>
-                <a href="/projects" class="cs-button-solid">Our Projects</a>
-            </div>
+<section id="sbsr-1126">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <!--Main Image-->
+            <picture class="cs-picture cs-picture1">
+                <source media="(max-width: 600px)" srcset="images/IMG_4983.jpg">
+                <source media="(min-width: 601px)" srcset="images/IMG_4983.jpg">
+                <img loading="lazy" decoding="async" src="images/IMG_4983.jpg" alt="person with box" width="657" height="676"  aria-hidden="true">
+            </picture>
+            <!--Circle Graphic-->
+            <img class="cs-graphic" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/circle-shape.svg" alt="graphic" width="641" height="660" aria-hidden="true">
         </div>
-    </section>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">About Sam - Personal Trainer</span>
+            <h2 class="cs-title">Helping To Unlock Your Better You</h2>
+            <p class="cs-text">
+              Hello! I'm Sam, a dedicated personal trainer based in the vibrant city of Toronto. With a wealth of experience and a deep passion for fitness, I am committed to guiding you on your journey to better health and wellness. Outside the gym, I'm an avid explorer of nature trails, an enthusiast of healthy cooking, and a continuous learner in the realms of physical and mental well-being. I understand that fitness isn't just about lifting weights; it's about living a balanced and fulfilling life.
+            </p>
+            <a class="cs-button-solid" aria-label="learn more about our programs" href="">Our Programs</a>
+        </div>
+    </div>
+</section>
+          
 
-    {% include 'components/cta.html' %}
+<!-- ============================================ -->
+<!--            Side By Side Reverse              -->
+<!-- ============================================ -->
 
+<section id="sbsr-692">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Main Image-->
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fgym.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fgym.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fgym.jpg" alt="gym" width="542" height="647">
+            </picture>
+            <!--Small Image-->
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fweight1.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fweight1.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fweight1.jpg" alt="weight measure" width="413" height="493">
+            </picture>
+            <!--Flower Graphic-->
+            <img class="cs-flower" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fbig-abstract-flower.svg" alt="flower graphic" width="363" height="350" aria-hidden="true">
+            <!--Spidey Sense Graphic-->
+            <img class="cs-sense" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fspider-sense.svg" alt="spidey sense graphic" width="80" height="89" aria-hidden="true">
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Philosophy and Approach</span>
+            <h2 class="cs-title">My <span class="cs-color">Training Philosophy</span> And Approach</h2>
+            <p class="cs-text">
+                At the core of my training philosophy is the belief in functional strength training. This approach goes beyond merely lifting weights; it's about equipping you with the physical capacity to thrive in all aspects of life. I prioritize building not just raw muscle power, but also the functional mobility and resilience needed for your everyday activities.
+            </p>
+            <p class="cs-text">
+                Imagine effortlessly carrying groceries, playing with your children, or tackling a hiking trail with confidence. These are the moments that functional strength training prepares you for – a life where physical vitality seamlessly integrates with your daily routines.
+            </p>
+            <a href="" class="cs-button-solid">Book Appointment</a>
+        </div>
+    </div>
+    <!--Floating Leaf-->
+    <img class="cs-floater" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fleaf4.png" alt="leaf" width="216" height="384" aria-hidden="true">
+</section>
+   
+
+
+   
 {% endblock %}

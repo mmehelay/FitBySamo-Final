@@ -1,123 +1,125 @@
-/* DARK MODE AND TOGGLE STYLES */
+/* Add this as it's own dark.css file and linked on all pages */
 
 /*-- -------------------------- -->
 <---      Core Dark Styles      -->
 <--- -------------------------- -*/
 
 /* Mobile */
-@media only screen and (min-width: 0em) {
-	// Dark Mode Color Scheme
-	:root {
-		--dark: #082032;
-		--medium: #2c394b;
-		--accent: #334756;
-	}
+@media only screen and (min-width: 0rem) {
 
-	body.dark-mode {
-		background-color: var(--dark);
+    // Dark Mode Color Scheme
+    :root {
+        --dark: #121212;
+        --medium: #282828;
+        --accent: #404040;
+        --bodyTextColorWhite: #FAFBFC;
+    }
 
-		p,
-		li,
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			color: #fff;
-		}
+    body.dark-mode {
+        background-color: var(--dark);
 
-		// hide all light classes
-		.light {
-			display: none;
-		}
+        p, li, h1, h2, h3, h4, h5, h6, .cs-title, .cs-text, .cs-li {
+            color: var(--bodyTextColorWhite);
+        }
 
-		// show all dark classes
-		.dark {
-			display: block !important;
-		}
-	}
+        // hide all light classes
+        .light {
+            display: none;
+        }
 
-	.dark {
-		display: none;
-	}
+        // show all dark classes
+        .dark {
+            display: block !important;
+        }
+    }
+
+    .dark {
+        /* class used to hide elements that only need to be seen when dark mode is enabled */
+        display: none;
+    }
 }
 
 /*-- -------------------------- -->
 <---      Dark Mode Toggle      -->
 <--- -------------------------- -*/
 
-/* Mobile - 360px */
+/* Mobile */
 @media only screen and (min-width: 0rem) {
-	body.dark-mode {
-		#dark-mode-toggle {
-			.cs-sun {
-				transform: translate(-50%, -50%);
-				opacity: 1;
-			}
 
-			.cs-moon {
-				transform: translate(-50%, -150%);
-				opacity: 0;
-				fill: #fff;
-			}
-		}
-	}
+    // Dark Mode Toggle Switch Animation
+    body.dark-mode {
+        #dark-mode-toggle {
+            .cs-sun {
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }
 
-	#dark-mode-toggle {
-		display: block;
-		position: absolute;
-		top: calc(10 / 16 * 1rem);
-		right: calc(70 / 16 * 1rem);
-		width: calc(48 / 16 * 1rem);
-		height: calc(48 / 16 * 1rem);
-		background: transparent;
-		border: none;
-		overflow: hidden;
-		padding: 0;
-		z-index: 1000;
+            .cs-moon {
+                transform: translate(-50%, -150%);
+                opacity: 0;
+            }
+        }
+    }
 
-		img,
-		svg {
-			//center image inside button
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			width: calc(20 / 16 * 1rem);
-			height: calc(20 / 16 * 1rem);
-			pointer-events: none;
-		}
+    // Toggle 
+    #dark-mode-toggle {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: calc(60 / 16 * 1rem);
+        width: calc(48 / 16 * 1rem);
+        height: calc(48 / 16 * 1rem);
+        background: transparent;
+        border: none;
+        overflow: hidden;
+        padding: 0;
 
-		.cs-moon {
-			z-index: 2;
-			// Transition properties
-			transition: transform 0.3s, opacity 0.3s;
+        //center image inside button
+        img, svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(25 / 16 * 1rem);
+            height: calc(25 / 16 * 1rem);
+            pointer-events: none;
+            
+        }
 
-			// fill: yellow; --> uncomment to change the color of the moon if needed
-		}
+        .cs-moon {
+            z-index: 2;
+            // Transition properties
+            transition: transform .3s, opacity .3s, fill .3s;
+            fill: #000; // --> change the color of the moon graphic based ont he background being lighter or darker
+        }
 
-		.cs-sun {
-			z-index: 1;
-			// Transition property
-			transform: translate(-50%, 100%);
-			opacity: 0;
-			transition: transform 0.3s, opacity 0.3s;
-		}
-	}
+        .cs-sun {
+            z-index: 1;
+            // Transition property
+            transform: translate(-50%, 100%);
+            opacity: 0;
+            transition: transform .3s, opacity .3s;
+        }
+        
+    }
 }
 
-/* Desktop - 1024px */
+/* Desktop */
 @media only screen and (min-width: 64rem) {
-	#dark-mode-toggle {
-		position: relative;
-		transform: none;
-		top: auto;
-		right: auto;
-		margin: 0;
+    #dark-mode-toggle {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        margin-left: calc(30 / 16 * 1rem);
+        margin-bottom: calc(0 / 16 * 1rem);
 
-		&:hover {
-			cursor: pointer;
-		}
-	}
+        .cs-moon {
+            /* change to whatever you need it to be */
+            // fill: #fff;
+        }
+    }
 }
+                                
+	 
