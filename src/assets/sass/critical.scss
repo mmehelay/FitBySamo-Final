@@ -8,6 +8,7 @@
         /* 116px - 164px top */
         /* 60px - 100px  bottom */
         padding: clamp(7.25rem, 16.82vw, 10.25rem) calc(16 / 16 * 1rem) clamp(3.75rem, 7.82vw, 6.25rem);
+        padding-top:200px;
         background-color: #f7f7f7;
         /* clips the svg wave from overflowing */
         overflow: hidden;
@@ -155,6 +156,7 @@
 @media only screen and (min-width: 64rem) {
     #hero-855 {
         text-align: left;
+        padding: clamp(7.25rem, 16.82vw, 10.25rem) calc(16 / 16 * 1rem) clamp(3.75rem, 7.82vw, 6.25rem);
         .cs-container {
             flex-direction: row;
             justify-content: space-between;
