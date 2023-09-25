@@ -9,6 +9,7 @@
 
     #contact-1105 {
         padding: var(--sectionPadding);
+        padding-top:200px;
         position: relative;
         z-index: 1;
         
@@ -287,6 +288,7 @@
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #contact-1105 {
+        padding: var(--sectionPadding);
         .cs-container {
             max-width: calc(1280 / 16 * 1rem);
             flex-direction: row;
