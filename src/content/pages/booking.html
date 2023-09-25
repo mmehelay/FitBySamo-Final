@@ -1,0 +1,25 @@
+---
+title: 'Booking'
+description: "Reach out to Snap N Sweet for inquiries, bookings, and personalized event experiences. Contact us to discuss how our 360 photobooth services can elevate your special occasions. Our team is ready to assist you in creating memorable moments, custom setups, and immersive event entertainment. Get in touch with Snap N Sweet today."
+permalink: '/Booking/'
+eleventyNavigation:
+  key: Booking
+  order: 800
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/css/booking.css">
+{% endblock %}
+
+{% block body %}
+<div class="Calender">
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/fitnessbysamo" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+</div>
+
+
+{% endblock %}
