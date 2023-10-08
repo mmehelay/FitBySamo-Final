@@ -309,6 +309,313 @@
 		}
 	}
 }
+
+
+
+
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-879 {
+        padding: var(--sectionPadding);
+        /* clips the svg wave from overflowing */
+        overflow: hidden;
+        position: relative;
+        background-color: #f7f7f7;
+        z-index: 1;
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at desktop */
+            max-width: calc(550 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+        .cs-topper {
+			font-size: var(--topperFontSize);
+			line-height: 1.2em;
+			text-transform: uppercase;
+			text-align: inherit;
+			letter-spacing: 0.1em;
+			font-weight: 700;
+			color: var(--primary);
+			margin-bottom: calc(4 / 16 * 1rem);
+			display: block;
+		}
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-button-solid {
+            font-size: calc(16 / 16 * 1rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: calc(150 / 16 * 1rem);
+            padding: 0 calc(24 / 16 * 1rem);
+            background-color: var(--primary);
+            border-radius: calc(4 / 16 * 1rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: calc(4 / 16 * 1rem);
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-card-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            /* 16px - 20px */
+            gap: clamp(1rem, 2vw, 1.25rem);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-item {
+            list-style: none;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            grid-column: span 6;
+        }
+
+        .cs-link {
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
+            height: calc(420 / 16 * 1rem);
+            padding: calc(20 / 16 * 1rem);
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            border-radius: calc(16 / 16 * 1rem);
+            /* clips img corners around the border */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: calc(12 / 16 * 1rem);
+            position: relative;
+        }
+
+        .cs-h3 {
+            font-size: calc(20 / 16 * 1rem);
+            line-height: 1.2em;
+            text-align: inherit;
+            font-weight: 700;
+            margin: 0;
+            color: var(--bodyTextColorWhite);
+        }
+
+        .cs-item-p {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.5em;
+            text-align: inherit;
+            margin: 0;
+            color: var(--bodyTextColorWhite);
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            object-fit: cover;
+
+            &:before {
+                /* gradient overlay */
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                    0deg,
+                    #000000 10.13%,
+                    rgba(0, 0, 0, 0) 40.71%
+                );
+                opacity: 1;
+                position: absolute;
+                display: block;
+                bottom: 0;
+                left: 0;
+                transition: height 0.3s;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                /* Makes img tag act as a background image */
+                object-fit: cover;
+                position: relative;
+                z-index: -1;
+                transition: transform 0.6s;
+            }
+        }
+
+        .cs-wave {
+            /* we're stretching the svg wider than the viewport so it's taller and has more of a presence */
+            width: 320%;
+            height: auto;
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-879 {
+        .cs-item {
+            grid-column: span 3;
+            &:last-of-type {
+                grid-column: span 6;
+            }
+        }
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #services-879 {
+        /* the padding grows with the screen width so as the svg gets taller it doesn't overlap the section */
+        padding-bottom: 14vw;
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+        }
+
+        .cs-item {
+            grid-column: span 2;
+            &:last-of-type {
+                grid-column: span 2;
+            }
+        }
+
+        .cs-link {
+            &:hover,
+            &:focus-within {
+                .cs-h3 {
+                    color: var(--primary);
+                    transform: translateY(0);
+                }
+
+                .cs-item-p {
+                    height: auto;
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+                .cs-background {
+                    &:before {
+                        height: 180%;
+                    }
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .cs-h3 {
+            /* transform down the same amount as the flex gap */
+            transform: translateY(calc(12 / 16 * 1rem));
+            transition:
+                transform 0.3s,
+                color 0.3s;
+        }
+
+        .cs-item-p {
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transform: translateY(calc(50 / 16 * 1rem));
+            transition:
+                height 0.3s,
+                opacity 0.3s,
+                transform 0.3s;
+        }
+
+        .cs-wave {
+            width: 100%;
+            left: 0;
+            transform: none;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #services-879 {
+            background-color: rgba(#000, 20%);
+
+            .cs-topper {
+                color: var(--primaryLight);
+            }
+            .cs-title,
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                opacity: 0.8;
+            }
+
+            .cs-wave {
+                path {
+                    fill: var(--dark);
+                }
+            }
+        }
+    }
+}
+
+                                
                                 
 /*-- -------------------------- -->
 <---          Pricing           -->
