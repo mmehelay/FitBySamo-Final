@@ -1,15 +1,12 @@
 {
-	"name": "Code Stitch Web Designs",
-	"email": "help@codestitch.app",
-	"phoneForTel": "555-779-4407",
-	"phoneFormatted": "(555) 779-4407",
+	"name": "FitBySamo",
+	"email": "Fitnessbysamo@gmail.com",
+	"phoneForTel": "647-285-8007",
+	"phoneFormatted": "(647) 285-8007",
 	"address": {
-		"lineOne": "First Address Line",
-		"lineTwo": "Second Address Line",
-		"city": "Denver",
-		"state": "CO",
-		"zip": "80206",
-		"mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+		"city": "Toronto",
+		"state": "ON",
+		"zip": "M9C 4x5"
 	},
-	"domain": "www.codestitch.app"
+	"domain": "http://fitbysamo.com/"
 }
